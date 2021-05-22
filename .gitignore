@@ -37,3 +37,4 @@ out/
 .vscode/
 
 ### Spring Security Properties ###
+application-oauth.properties
