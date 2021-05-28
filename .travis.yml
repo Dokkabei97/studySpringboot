@@ -5,7 +5,10 @@ jdk:
 branches:
   only:
     - master
-    -
+
+before_install:
+  - chmod +x gradlew
+
 # Travis CI 서버의 Home
 cache:
   directories:
@@ -15,7 +18,6 @@ cache:
 script: "./gradlew clean build"
 
 before_deploy:
-  - chmod +x gradlew
   - zip -r study-springboot2-webservice *
   - mkdir -p deploy
   - mv study-springboot2-webservice.zip deploy/study-springboot2-websservice.zip
