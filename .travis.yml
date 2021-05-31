@@ -20,7 +20,7 @@ script: "./gradlew clean build"
 before_deploy:
   - zip -r study-springboot2-webservice *
   - mkdir -p deploy
-  - mv study-springboot2-webservice.zip deploy/study-springboot2-websservice.zip
+  - mv study-springboot2-webservice.zip deploy/study-springboot2-webservice.zip
 
 deploy:
   - provider: s3
